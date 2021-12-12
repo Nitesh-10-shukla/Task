@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+/>
+
+  <link rel="stylesheet" href="/Style.css">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+</head>
+<body>
+
+<div>
+  <img class="image" src="/images/logo.svg" alt="img"/>
+  <h1 class="subheading">We are launching <span>soon!</span></h1>
+  <p class="subheading_2">Subscribe and get notified</p>
+  <form class="formsubmit" name="form" onsubmit="return email_funnction()">
+    <input type="search" placeholder="Enter your email address..." name="email" required />
+    <button type="submit"  id="btn" >Notify Me</button>
+
+  <p  id="errormsg" class="errormessage"></p>
+
+
+  </form>
+  
+  <img class="bottomimage" src="/images/illustration-dashboard.png" alt="bottomimg"/>
+  <div class="social">
+    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook icons"></i></a>
+      <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter icons"></i></a>
+      <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram icons" ></i></a>
+  </div>
+  <p class="footer">&copy; Copyright Ping. All rights reserved.</p>
+</div>
+  
+  
+</body>
+ <script>
+function email_funnction() {
+			var email = document.form.email.value;
+			if(email.indexOf('@')<=0){
+				document.getElementById('errormsg').innerHTML="Please enter valid email";
+				return false;
+			}
+      else{
+        input("")
+      }     
+			if ((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')) {
+				document.getElementById('errormsg').innerHTML="Please enter valid email";
+				return false;
+
+			}
+      else{
+        input("")
+      }
+		}
+</script> 
+</html>
